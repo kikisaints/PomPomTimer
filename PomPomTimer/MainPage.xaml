@@ -1,0 +1,102 @@
+﻿<Page
+    x:Class="PomPomTimer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PomPomTimer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationBackgroundBrush}">
+
+    <Page.Resources>
+        <Flyout x:Key="AddPomodoroFlyout" x:Name="AddNewPomo" Placement="Bottom" LightDismissOverlayMode="On" ShowMode="Transient">
+            <StackPanel Spacing="10">
+                <TextBlock Text="Brief Discription of Task"/>
+                <TextBox Header="0 / 256" Width="200"/>
+            </StackPanel>
+        </Flyout>
+    </Page.Resources>
+
+    <Grid x:Name="AppRoot">
+        <TextBlock Text="PomPom Timer" RequestedTheme="Dark" Style="{ThemeResource CaptionTextBlockStyle}" Margin="5"/>
+        <Grid Margin="0, 25, 0, 0" RequestedTheme="Dark">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Spacing="10" Margin="15">
+                <Button BorderThickness="0" Click="Button_Click_1" x:Name="AddButton">
+                    <Button.Content>
+                        <SymbolIcon Symbol="Add" ToolTipService.ToolTip="Add New Pomodoro"/>
+                    </Button.Content>
+                </Button>
+                <Button BorderThickness="0" Click="Button_Click">
+                    <Button.Content>
+                        <SymbolIcon Symbol="Setting" ToolTipService.ToolTip="Settings"/>
+                    </Button.Content>
+                </Button>
+            </StackPanel>
+
+            <Pivot x:Name="rootPivot" Grid.Row="1">
+                <PivotItem x:Name="PomoItemsPage">
+                    <ListView x:Name="PomodoroItems" VerticalAlignment="Stretch" SelectionMode="None"/>
+                </PivotItem>
+                <PivotItem x:Name="SettingsPage" RequestedTheme="Light">
+                    <ScrollViewer Margin="0, -50, 0, 0">
+                        <StackPanel Spacing="10">
+                            <TextBlock Style="{ThemeResource TitleTextBlockStyle}" Text="Settings"/>
+                            <StackPanel Orientation="Horizontal" Spacing="15" RequestedTheme="Light">
+                                <ComboBox x:Name="TaskTime" Header="Task Time (minutes)" Width="100" SelectedIndex="3" BorderThickness="1" 
+                                          SelectionChanged="TaskTime_SelectionChanged">
+                                    <ComboBoxItem>10</ComboBoxItem>
+                                    <ComboBoxItem>15</ComboBoxItem>
+                                    <ComboBoxItem>20</ComboBoxItem>
+                                    <ComboBoxItem>25</ComboBoxItem>
+                                    <ComboBoxItem>30</ComboBoxItem>
+                                    <ComboBoxItem>35</ComboBoxItem>
+                                    <ComboBoxItem>40</ComboBoxItem>
+                                </ComboBox>
+                                <ComboBox x:Name="BreakTime" Header="Break Time (minutes)" Width="100" SelectedIndex="0" BorderThickness="1"
+                                          SelectionChanged="BreakTime_SelectionChanged">
+                                    <ComboBoxItem>5</ComboBoxItem>
+                                    <ComboBoxItem>10</ComboBoxItem>
+                                    <ComboBoxItem>15</ComboBoxItem>
+                                    <ComboBoxItem>20</ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
+                            <CheckBox IsChecked="True" Content="Send system notifications"/>
+                            <TextBlock Text="Icon Cheatsheet" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                            <StackPanel Orientation="Horizontal" Spacing="5">
+                                <FontIcon Glyph="&#xE768;"/>
+                                <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="Start a fresh Pomodoro"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="5">
+                                <FontIcon Glyph="&#xE769;"/>
+                                <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="Pause a Pomodoro that's in progress"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="5">
+                                <FontIcon Glyph="&#xEC32;"/>
+                                <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="Start your break"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="5">
+                                <FontIcon Glyph="&#xEC57;"/>
+                                <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="Resume your Pomodoro"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="5">
+                                <FontIcon Glyph="&#xE8FB;"/>
+                                <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="Complete your Pomodoro"/>
+                            </StackPanel>
+                            <HyperlinkButton Foreground="White">
+                                <HyperlinkButton.Content>
+                                    <TextBlock Text="What is a Pomodoro?"/>
+                                </HyperlinkButton.Content>
+                            </HyperlinkButton>
+                        </StackPanel>
+                    </ScrollViewer>
+                </PivotItem>
+            </Pivot>
+        </Grid>
+            
+    </Grid>
+</Page>
