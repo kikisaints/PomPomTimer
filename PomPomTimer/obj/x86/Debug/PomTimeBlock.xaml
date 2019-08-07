@@ -11,7 +11,7 @@
         <SolidColorBrush x:Key="NonInteractionGray" Color="Black"/>
     </UserControl.Resources>
 
-    <Grid x:ConnectionId='2' x:Name="root" Background="#b3f7f7f7" CornerRadius="2" MinHeight="58" Width="450" HorizontalAlignment="Stretch" RequestedTheme="Light" Margin="12">
+    <Grid x:ConnectionId='2' x:Name="root" Background="#b3f7f7f7" MinHeight="58" Width="450" HorizontalAlignment="Stretch" RequestedTheme="Light" Margin="12">
         <Grid.ContextFlyout>
             <MenuFlyout>
                 <MenuFlyoutItem x:ConnectionId='3' x:Name="MarkAsButton" Icon="Accept" Text="Mark Complete"                               />

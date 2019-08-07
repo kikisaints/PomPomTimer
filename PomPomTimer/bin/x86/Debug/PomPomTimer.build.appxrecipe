@@ -10,22 +10,22 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>b9b1fd49-29e2-4fd2-b218-948f2c179292</PackageIdentityName>
     <PackageIdentityPublisher>CN=kisai</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\AppX</LayoutDir>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\bin\x86\Debug\PomPomTimer.exe">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\PomPomTimer.exe">
       <PackagePath>entrypoint\PomPomTimer.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\.nuget\packages\microsoft.toolkit.uwp.notifications\5.1.1\lib\uap10.0\Microsoft.Toolkit.Uwp.Notifications.dll">
@@ -37,58 +37,58 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18843.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\Assets\Tomato.png">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\Tomato.png">
       <PackagePath>Assets\Tomato.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\bin\x86\Debug\PomPomTimer.xr.xml">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\PomPomTimer.xr.xml">
       <PackagePath>PomPomTimer.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\bin\x86\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\bin\x86\Debug\PomTimeBlock.xbf">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\PomTimeBlock.xbf">
       <PackagePath>PomTimeBlock.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18843.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\kisai\source\repos\PomPomTimer\PomPomTimer\bin\x86\Debug\Core\PomPomTimer.exe">
+    <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\Core\PomPomTimer.exe">
       <PackagePath>PomPomTimer.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

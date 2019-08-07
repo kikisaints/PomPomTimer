@@ -8,15 +8,6 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationBackgroundBrush}">
 
-    <Page.Resources>
-        <Flyout x:Key="AddPomodoroFlyout" x:Name="AddNewPomo" Placement="Bottom" LightDismissOverlayMode="On" ShowMode="Transient">
-            <StackPanel Spacing="10">
-                <TextBlock Text="Brief Discription of Task"/>
-                <TextBox Header="0 / 256" Width="200"/>
-            </StackPanel>
-        </Flyout>
-    </Page.Resources>
-
     <Grid x:Name="AppRoot">
         <TextBlock Text="PomPom Timer" RequestedTheme="Dark" Style="{ThemeResource CaptionTextBlockStyle}" Margin="5"/>
         <Grid Margin="0, 25, 0, 0" RequestedTheme="Dark">

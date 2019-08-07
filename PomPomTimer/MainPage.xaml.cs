@@ -70,7 +70,6 @@ namespace PomPomTimer
             TextBox contentTextBox = new TextBox() { Width = 320, Height = 56, MaxLength = 50, PlaceholderText = "Discription of task" };
             contentTextBox.Header = "0 / 50";
             contentTextBox.TextChanged += new TextChangedEventHandler(TextBox_TextChanged);
-            contentTextBox.CornerRadius = new CornerRadius(2);
             contentTextBox.BorderThickness = new Thickness(1);
 
             newTaskDialog = new ContentDialog

@@ -8276,11 +8276,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kisai\\source\\repos\\PomPomTimer\\PomPomTimer\\PomPomTimer.csproj",
+      "projectUniqueName": "C:\\Users\\kisai\\Documents\\PomPomTimer\\PomPomTimer\\PomPomTimer.csproj",
       "projectName": "PomPomTimer",
-      "projectPath": "C:\\Users\\kisai\\source\\repos\\PomPomTimer\\PomPomTimer\\PomPomTimer.csproj",
+      "projectPath": "C:\\Users\\kisai\\Documents\\PomPomTimer\\PomPomTimer\\PomPomTimer.csproj",
       "packagesPath": "C:\\Users\\kisai\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kisai\\source\\repos\\PomPomTimer\\PomPomTimer\\obj\\",
+      "outputPath": "C:\\Users\\kisai\\Documents\\PomPomTimer\\PomPomTimer\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
