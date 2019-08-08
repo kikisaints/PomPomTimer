@@ -6,10 +6,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationBackgroundBrush}">
+    Background="{ThemeResource backgroundGradient}">
 
-    <Grid x:ConnectionId='2' x:Name="AppRoot">
-        <TextBlock Text="PomPom Timer" RequestedTheme="Dark" Style="{ThemeResource CaptionTextBlockStyle}" Margin="5"/>
+    <Grid x:ConnectionId='1' x:Name="AppRoot">
+        <TextBlock Text="PomPom Timer" Foreground="{ThemeResource SystemAccentColor}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="5"/>
         <Grid Margin="0, 25, 0, 0" RequestedTheme="Dark">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -17,28 +17,28 @@
             </Grid.RowDefinitions>
 
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Spacing="10" Margin="15">
-                <Button x:ConnectionId='9' BorderThickness="0"                        x:Name="AddButton">
+                <Button x:ConnectionId='8' BorderThickness="0"                        x:Name="AddButton">
                     <Button.Content>
-                        <SymbolIcon Symbol="Add" ToolTipService.ToolTip="Add New Pomodoro"/>
+                        <SymbolIcon Symbol="Add" Foreground="{ThemeResource SystemAccentColor}" ToolTipService.ToolTip="Add New Pomodoro"/>
                     </Button.Content>
                 </Button>
-                <Button x:ConnectionId='10' BorderThickness="0"                     >
+                <Button x:ConnectionId='9' BorderThickness="0"                     >
                     <Button.Content>
-                        <SymbolIcon Symbol="Setting" ToolTipService.ToolTip="Settings"/>
+                        <SymbolIcon Symbol="Setting" Foreground="{ThemeResource SystemAccentColor}" ToolTipService.ToolTip="Settings"/>
                     </Button.Content>
                 </Button>
             </StackPanel>
 
-            <Pivot x:ConnectionId='3' x:Name="rootPivot" Grid.Row="1">
-                <PivotItem x:ConnectionId='4' x:Name="PomoItemsPage">
-                    <ListView x:ConnectionId='8' x:Name="PomodoroItems" VerticalAlignment="Stretch" SelectionMode="None"/>
+            <Pivot x:ConnectionId='2' x:Name="rootPivot" Grid.Row="1">
+                <PivotItem x:ConnectionId='3' x:Name="PomoItemsPage">
+                    <ListView x:ConnectionId='7' x:Name="PomodoroItems" VerticalAlignment="Stretch" SelectionMode="None"/>
                 </PivotItem>
-                <PivotItem x:ConnectionId='5' x:Name="SettingsPage" RequestedTheme="Light">
+                <PivotItem x:ConnectionId='4' x:Name="SettingsPage" RequestedTheme="Light">
                     <ScrollViewer Margin="0, -50, 0, 0">
                         <StackPanel Spacing="10">
                             <TextBlock Style="{ThemeResource TitleTextBlockStyle}" Text="Settings"/>
                             <StackPanel Orientation="Horizontal" Spacing="15" RequestedTheme="Light">
-                                <ComboBox x:ConnectionId='6' x:Name="TaskTime" Header="Task Time (minutes)" Width="100" SelectedIndex="3" BorderThickness="1" 
+                                <ComboBox x:ConnectionId='5' x:Name="TaskTime" Header="Task Time (minutes)" Width="220" SelectedIndex="3" BorderThickness="1" 
                                                                                       >
                                     <ComboBoxItem>10</ComboBoxItem>
                                     <ComboBoxItem>15</ComboBoxItem>
@@ -48,7 +48,7 @@
                                     <ComboBoxItem>35</ComboBoxItem>
                                     <ComboBoxItem>40</ComboBoxItem>
                                 </ComboBox>
-                                <ComboBox x:ConnectionId='7' x:Name="BreakTime" Header="Break Time (minutes)" Width="100" SelectedIndex="0" BorderThickness="1"
+                                <ComboBox x:ConnectionId='6' x:Name="BreakTime" Header="Break Time (minutes)" Width="220" SelectedIndex="0" BorderThickness="1"
                                                                                        >
                                     <ComboBoxItem>5</ComboBoxItem>
                                     <ComboBoxItem>10</ComboBoxItem>
@@ -78,11 +78,15 @@
                                 <FontIcon Glyph="&#xE8FB;"/>
                                 <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="Complete your Pomodoro"/>
                             </StackPanel>
-                            <HyperlinkButton Foreground="White">
-                                <HyperlinkButton.Content>
-                                    <TextBlock Text="What is a Pomodoro?"/>
-                                </HyperlinkButton.Content>
-                            </HyperlinkButton>
+                            <StackPanel Spacing="5" Margin="0, 20, 0, 0">
+                                <TextBlock Text="Color Theme" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                                <ComboBox>
+                                    <ComboBoxItem>Pomodoro</ComboBoxItem>
+                                    <ComboBoxItem>Energy</ComboBoxItem>
+                                    <ComboBoxItem>Coffee</ComboBoxItem>
+                                    <ComboBoxItem>Slate</ComboBoxItem>
+                                </ComboBox>
+                            </StackPanel>
                         </StackPanel>
                     </ScrollViewer>
                 </PivotItem>

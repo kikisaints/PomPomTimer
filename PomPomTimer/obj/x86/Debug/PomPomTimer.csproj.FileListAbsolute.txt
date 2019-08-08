@@ -65,8 +65,6 @@ C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\PomPomTimer.build
 C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\Microsoft.Toolkit.Uwp.Notifications.dll
 C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\Microsoft.Toolkit.Uwp.Notifications.pdb
 C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\System.Runtime.dll
-C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\Microsoft.UI.Xaml.Markup.winmd
-C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\PomPomTimer.csprojAssemblyReference.cache
 C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\App.g.i.cs
 C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\App.g.cs
 C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\MainPage.g.i.cs
@@ -103,4 +101,4 @@ C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\qualifiers.txt.in
 C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\Microsoft.Toolkit.Uwp.Notifications.pri.xml
 C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636863354720000000.json
+C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Debug\PomPomTimer.csprojAssemblyReference.cache

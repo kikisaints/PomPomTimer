@@ -11,12 +11,22 @@
         <SolidColorBrush x:Key="NonInteractionGray" Color="Black"/>
     </UserControl.Resources>
 
-    <Grid x:Name="root" Background="#b3f7f7f7" MinHeight="58" Width="450" HorizontalAlignment="Stretch" RequestedTheme="Light" Margin="12">
+    <Grid x:Name="root" Background="#b3f7f7f7" MinHeight="58" Width="450" HorizontalAlignment="Stretch" BorderThickness="1" BorderBrush="White" RequestedTheme="Light" Margin="12">
         <Grid.ContextFlyout>
             <MenuFlyout>
                 <MenuFlyoutItem x:Name="MarkAsButton" Icon="Accept" Text="Mark Complete" Click="MenuFlyoutItem_Click_1"/>
-                <MenuFlyoutItem Icon="Refresh" Text="Reset"/>
-                <MenuFlyoutItem Icon="Copy" Text="Duplicate"/>
+                <MenuFlyoutItem Icon="Refresh" Text="Reset" Click="MenuFlyoutItem_Click_3"/>
+                <MenuFlyoutItem Icon="Copy" Text="Duplicate" Click="MenuFlyoutItem_Click_2"/>                
+                <MenuFlyoutItem Text="Move Up">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xE70E;"/>
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
+                <MenuFlyoutItem Text="Move Down">
+                    <MenuFlyoutItem.Icon>
+                        <FontIcon Glyph="&#xE70D;"/>
+                    </MenuFlyoutItem.Icon>
+                </MenuFlyoutItem>
                 <MenuFlyoutSeparator/>
                 <MenuFlyoutItem Icon="Delete" Text="Delete" Click="MenuFlyoutItem_Click"/>
             </MenuFlyout>
@@ -40,7 +50,8 @@
                 <FontIcon x:Name="PomThree" Glyph="&#xEA3A;" Foreground="{ThemeResource SystemAccentColor}" Opacity="0.75" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
                 <FontIcon x:Name="PomFour" Glyph="&#xEA3A;" Foreground="{ThemeResource SystemAccentColor}" Opacity="0.75" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15"/>
             </StackPanel>
-            <TextBlock Grid.Column="1" x:Name="DiscriptionBlock" Text="Pom time block brief discription" VerticalAlignment="Center" HorizontalAlignment="Left" Padding="5" TextWrapping="WrapWholeWords"/>
+            <TextBlock Grid.Column="1" PointerEntered="DiscriptionBlock_PointerEntered" PointerExited="DiscriptionBlock_PointerExited"
+                       x:Name="DiscriptionBlock" Text="Pom time block brief discription" VerticalAlignment="Center" HorizontalAlignment="Left" Padding="5" TextWrapping="WrapWholeWords"/>
 
             <Button x:Name="PomButton" Grid.Column="2" BorderThickness="0" Margin="25, 0" Click="Button_Click" Foreground="{ThemeResource SystemAccentColor}">
                 <Button.Content>

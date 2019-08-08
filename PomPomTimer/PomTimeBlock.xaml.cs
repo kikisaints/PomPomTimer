@@ -34,11 +34,16 @@ namespace PomPomTimer
         private bool done = false;
 
         private string ShortBreakIcon = "\uEC32";
+        private string pomodoroUnfilledDotIcon = "\uEA3A";
         private string pomodoroFilledDotIcon = "\uEA3B";
         private string playIcon = "\uE768";
         private string pauseIcon = "\uE769";
         private string restartIcon = "\uEC57";
         private string finishedIcon = "\uE8FB";
+
+        private Brush pomDotForegroundEnabled;
+        private Brush DiscriptionTextForegroundEnabled;
+        private Brush rootBackgroundEnabled;
 
         public bool wasRightTapped = false;
 
@@ -132,7 +137,7 @@ namespace PomPomTimer
 
         public string Discription
         {
-            get { return (string)GetValue(DiscriptionProperty); }
+            get { return DiscriptionBlock.Text; }
             set { DiscriptionBlock.Text = value as string; }
         }
 
@@ -215,11 +220,10 @@ namespace PomPomTimer
         private void DisablePomodoroTask()
         {
             done = true;
-            MarkAsButton.Icon = new SymbolIcon(Symbol.Play);
-            MarkAsButton.Text = "Enable Pomodoro";
 
             Windows.UI.Color color = new Windows.UI.Color();
             color.A = 0;
+            rootBackgroundEnabled = root.Background;
             root.Background = new SolidColorBrush(color);
             root.BorderThickness = new Thickness(1);
 
@@ -231,11 +235,37 @@ namespace PomPomTimer
             root.BorderBrush = new SolidColorBrush(borderColor);
 
             TimerValueBar.Visibility = Visibility.Collapsed;
+
+            pomDotForegroundEnabled = PomOne.Foreground;
             PomOne.Foreground = new SolidColorBrush(borderColor);
             PomTwo.Foreground = new SolidColorBrush(borderColor);
             PomThree.Foreground = new SolidColorBrush(borderColor);
             PomFour.Foreground = new SolidColorBrush(borderColor);
+
+            DiscriptionTextForegroundEnabled = DiscriptionBlock.Foreground;
             DiscriptionBlock.Foreground = new SolidColorBrush(borderColor);
+        }
+
+        private void EnablePomodoroTask()
+        {
+            done = false;
+            shortBreak = false;
+
+            root.Background = rootBackgroundEnabled;
+
+            PomOne.Glyph = pomodoroUnfilledDotIcon;
+            PomTwo.Glyph = pomodoroUnfilledDotIcon;
+            PomThree.Glyph = pomodoroUnfilledDotIcon;
+            PomFour.Glyph = pomodoroUnfilledDotIcon;
+
+            PomOne.Foreground = pomDotForegroundEnabled;
+            PomTwo.Foreground = pomDotForegroundEnabled;
+            PomThree.Foreground = pomDotForegroundEnabled;
+            PomFour.Foreground = pomDotForegroundEnabled;
+
+            DiscriptionBlock.Foreground = DiscriptionTextForegroundEnabled;
+
+            TimerValueBar.Visibility = Visibility.Visible;            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -299,6 +329,32 @@ namespace PomPomTimer
             PlayPauseTimerSymbol.Glyph = finishedIcon;
             PomButton.IsEnabled = false;
             DisablePomodoroTask();
+
+            MarkAsButton.Visibility = Visibility.Collapsed;
+        }
+
+        private void MenuFlyoutItem_Click_2(object sender, RoutedEventArgs e)
+        {
+            (parentReference as MainPage).DuplicateItem(this);
+        }
+
+        private void MenuFlyoutItem_Click_3(object sender, RoutedEventArgs e)
+        {
+            PlayPauseTimerSymbol.Glyph = playIcon;
+            PomButton.IsEnabled = true;
+            EnablePomodoroTask();
+
+            MarkAsButton.Visibility = Visibility.Visible;
+        }
+
+        private void DiscriptionBlock_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.IBeam, 0);
+        }
+
+        private void DiscriptionBlock_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 0);
         }
     }
 }

@@ -133,5 +133,10 @@ namespace PomPomTimer
         {
             PomodoroItems.Items.Remove(item);
         }
+
+        public void DuplicateItem(object item)
+        {
+            PomodoroItems.Items.Add(new PomTimeBlock() { Discription = (item as PomTimeBlock).Discription, parentReference = this });
+        }
     }
 }

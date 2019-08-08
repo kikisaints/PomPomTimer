@@ -5,18 +5,25 @@
     xmlns:local="using:PomPomTimer">
 
     <Application.Resources>
+        <Color x:Key="SystemAccentColor">#ff734949</Color>
+        
         <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
         <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
         <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
         <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
         <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="White"/>
+        <Thickness x:Key="ListViewItemRevealBorderThemeThickness">0</Thickness>
 
-        <AcrylicBrush x:Key="ApplicationBackgroundBrush"
-            BackgroundSource="HostBackdrop"
-            TintColor="{ThemeResource SystemAccentColorLight1}"
-            TintOpacity="0.95"
-            TintLuminosityOpacity="0.5"
-            FallbackColor="{ThemeResource SystemAccentColorLight2}"/>
+        <LinearGradientBrush x:Key="backgroundGradient" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Color="{ThemeResource GradientStart}" Offset="0.0" />
+            <GradientStop Color="{ThemeResource GradientEnd}" Offset="1.0" />
+        </LinearGradientBrush>
+
+        <Color x:Key="GradientStart">#ffe3baba</Color>
+        <Color x:Key="GradientEnd">#ffbd8686</Color>
+        
+        <SolidColorBrush x:Key="ApplicationBackgroundBrush"
+            Color="#ffe3baba"/>
 
         <Style TargetType="ListViewItem">
             <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}" />
@@ -31,7 +38,6 @@
             <Setter Property="MinWidth" Value="{ThemeResource ListViewItemMinWidth}" />
             <Setter Property="MinHeight" Value="{ThemeResource ListViewItemMinHeight}" />
             <Setter Property="AllowDrop" Value="False" />
-            <Setter Property="UseSystemFocusVisuals" Value="{StaticResource UseSystemFocusVisuals}" />
             <Setter Property="FocusVisualMargin" Value="0" />
             <Setter Property="Template">
                 <Setter.Value>
