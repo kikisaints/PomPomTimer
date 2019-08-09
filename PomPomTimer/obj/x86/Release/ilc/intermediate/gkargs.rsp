@@ -1,0 +1,8 @@
+﻿"C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Release\ilc\in\Microsoft.Toolkit.Uwp.Notifications.dll"
+"C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Release\ilc\in\PomPomTimer.exe"
+/Lib:"C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Release\ilc\in"
+/Lib:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.net.native.compiler\2.2.3\tools\x86\ilc\lib\Private"
+/WinMD:"C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\obj\x86\Release\ilc\in\WinMetadata\Windows.winmd"
+/VSTelemetrySessionSettings:"{"IsOptedIn":true,"HostName":"Dev14","AppInsightsInstrumentationKey":"f144292e-e3b2-4011-ac90-20e5c03fbce5","AsimovInstrumentationKey":"AIF-312cbd79-9dbb-4c48-a7da-3cc2a931cb70","AppId":1001,"UserId":"06164f32-c051-4819-ac3e-ed30ddfba2e4","Id":"e86f3d45-606c-4aec-95ff-c13e432dfcd9","ProcessStartTime":637009677141252208}"
+/RdXmlPath:"C:\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.net.native.compiler\2.2.3\tools\LibraryXML"
+/RunOnlyPreDR

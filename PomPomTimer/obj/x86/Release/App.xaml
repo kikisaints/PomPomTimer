@@ -1,0 +1,34 @@
+﻿<Application
+    x:Class="PomPomTimer.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:PomPomTimer">
+
+    <Application.Resources>
+        <Color x:Key="SystemAccentColor">#ffdd4029</Color>
+        <Color x:Key="GradientStart">#fff09968</Color>
+        <Color x:Key="GradientEnd">#ffeb5a44</Color>
+        
+        <Color x:Key="PomodoroAccent">#ffdd4029</Color>
+        <Color x:Key="PomodoroStart">#fff09968</Color>
+        <Color x:Key="PomodoroEnd">#ffeb5a44</Color>
+
+        <Color x:Key="EnergyAccent">#ff7fbd14</Color>
+        <Color x:Key="EnergyStart">#ff6E8C03</Color>
+        <Color x:Key="EnergyEnd">#ff465902</Color>
+
+        <Color x:Key="CoffeeAccent">#ffBD7938</Color>
+        <Color x:Key="CoffeeStart">#ff8D4421</Color>
+        <Color x:Key="CoffeeEnd">#ff643001</Color>
+
+        <Color x:Key="SlateAccent">#ff5090b6</Color>
+        <Color x:Key="SlateStart">#ff485e71</Color>
+        <Color x:Key="SlateEnd">#ff2A3640</Color>
+
+        <Thickness x:Key="ListViewItemRevealBorderThemeThickness">0</Thickness>
+        <SolidColorBrush x:Key="ListViewItemRevealBorderBrushPressed" Color="Transparent"/>
+        
+    </Application.Resources>
+
+</Application>
+
