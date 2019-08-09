@@ -6,11 +6,23 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource backgroundGradient}">
+    Background="Transparent">
 
-    <Grid x:Name="AppRoot">
-        <TextBlock Text="PomPom Timer" Foreground="{ThemeResource SystemAccentColor}" Style="{ThemeResource CaptionTextBlockStyle}" Margin="5"/>
-        <Grid Margin="0, 25, 0, 0" RequestedTheme="Dark">
+    <Page.Resources>
+        <SolidColorBrush x:Key="ButtonBackground" Color="Transparent"/>
+        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="Transparent"/>
+        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="Transparent"/>
+        <SolidColorBrush x:Key="ButtonBackgroundDisabled" Color="Transparent"/>
+        <SolidColorBrush x:Key="ButtonForegroundDisabled" Color="White"/>
+
+        <LinearGradientBrush x:Key="backgroundGradient" StartPoint="0.5,0" EndPoint="0.5,1">
+            <GradientStop Color="{ThemeResource GradientStart}" Offset="0.0" />
+            <GradientStop Color="{ThemeResource GradientEnd}" Offset="1.0" />
+        </LinearGradientBrush>
+    </Page.Resources>
+
+    <Grid x:Name="AppRoot" RequestedTheme="Dark" Background="{ThemeResource backgroundGradient}">
+        <Grid Margin="0, 25, 0, 0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
@@ -19,25 +31,26 @@
             <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Left" Spacing="10" Margin="15">
                 <Button BorderThickness="0" Click="Button_Click_1" x:Name="AddButton">
                     <Button.Content>
-                        <SymbolIcon Symbol="Add" Foreground="{ThemeResource SystemAccentColor}" ToolTipService.ToolTip="Add New Pomodoro"/>
+                        <SymbolIcon x:Name="AddSymbol" Symbol="Add"/>
                     </Button.Content>
                 </Button>
                 <Button BorderThickness="0" Click="Button_Click">
                     <Button.Content>
-                        <SymbolIcon Symbol="Setting" Foreground="{ThemeResource SystemAccentColor}" ToolTipService.ToolTip="Settings"/>
+                        <SymbolIcon Symbol="Setting"/>
                     </Button.Content>
                 </Button>
             </StackPanel>
 
             <Pivot x:Name="rootPivot" Grid.Row="1">
                 <PivotItem x:Name="PomoItemsPage">
-                    <ListView x:Name="PomodoroItems" VerticalAlignment="Stretch" SelectionMode="None"/>
+                    <ListView x:Name="PomodoroItems" VerticalAlignment="Stretch" SelectionMode="None" CanReorderItems="True" AllowDrop="True"/>
                 </PivotItem>
-                <PivotItem x:Name="SettingsPage" RequestedTheme="Light">
+                <PivotItem x:Name="SettingsPage" RequestedTheme="Dark">
                     <ScrollViewer Margin="0, -50, 0, 0">
                         <StackPanel Spacing="10">
                             <TextBlock Style="{ThemeResource TitleTextBlockStyle}" Text="Settings"/>
-                            <StackPanel Orientation="Horizontal" Spacing="15" RequestedTheme="Light">
+                            <ToggleSwitch x:Name="notificationToggle" OnContent="Send system notifications" OffContent="Be silent" Toggled="ToggleSwitch_Toggled" IsOn="True"/>
+                            <StackPanel Orientation="Horizontal" Spacing="15">
                                 <ComboBox x:Name="TaskTime" Header="Task Time (minutes)" Width="220" SelectedIndex="3" BorderThickness="1" 
                                           SelectionChanged="TaskTime_SelectionChanged">
                                     <ComboBoxItem>10</ComboBoxItem>
@@ -55,8 +68,7 @@
                                     <ComboBoxItem>15</ComboBoxItem>
                                     <ComboBoxItem>20</ComboBoxItem>
                                 </ComboBox>
-                            </StackPanel>
-                            <CheckBox IsChecked="True" Content="Send system notifications"/>
+                            </StackPanel>                            
                             <TextBlock Text="Icon Cheatsheet" Style="{ThemeResource SubtitleTextBlockStyle}"/>
                             <StackPanel Orientation="Horizontal" Spacing="5">
                                 <FontIcon Glyph="&#xE768;"/>
@@ -78,9 +90,9 @@
                                 <FontIcon Glyph="&#xE8FB;"/>
                                 <TextBlock Style="{ThemeResource CaptionTextBlockStyle}" Text="Complete your Pomodoro"/>
                             </StackPanel>
-                            <StackPanel Spacing="5" Margin="0, 20, 0, 0">
-                                <TextBlock Text="Color Theme" Style="{ThemeResource SubtitleTextBlockStyle}"/>
-                                <ComboBox>
+                            <StackPanel Spacing="5" Margin="0, 20, 0, 0" Visibility="Collapsed">
+                                <TextBlock Text="Theme" Style="{ThemeResource SubtitleTextBlockStyle}"/>
+                                <ComboBox x:Name="ThemeBox" Width="220" SelectedIndex="0" BorderThickness="1" SelectionChanged="ComboBox_SelectionChanged">
                                     <ComboBoxItem>Pomodoro</ComboBoxItem>
                                     <ComboBoxItem>Energy</ComboBoxItem>
                                     <ComboBoxItem>Coffee</ComboBoxItem>

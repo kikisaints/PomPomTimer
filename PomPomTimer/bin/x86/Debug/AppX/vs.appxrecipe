@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-08T23:32:08.978</Modified>
+      <Modified>2019-08-09T21:38:22.851</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\PomPomTimer.exe">
       <PackagePath>entrypoint\PomPomTimer.exe</PackagePath>
-      <Modified>2019-08-08T23:32:08.249</Modified>
+      <Modified>2019-08-09T21:38:22.207</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\.nuget\packages\microsoft.toolkit.uwp.notifications\5.1.1\lib\uap10.0\Microsoft.Toolkit.Uwp.Notifications.dll">
       <PackagePath>Microsoft.Toolkit.Uwp.Notifications.dll</PackagePath>
@@ -52,37 +52,37 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2019-08-05T21:03:38.518</Modified>
+      <Modified>2019-08-09T20:05:15.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-05T21:03:02.287</Modified>
+      <Modified>2019-08-09T20:05:34.802</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-05T21:04:33.778</Modified>
+      <Modified>2019-08-09T20:07:29.943</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-05T21:05:19.639</Modified>
+      <Modified>2019-08-09T20:06:08.779</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-05T21:05:04.108</Modified>
+      <Modified>2019-08-09T20:07:02.966</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-05T21:04:14.126</Modified>
+      <Modified>2019-08-09T20:07:55.745</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-08-05T21:03:56.052</Modified>
+      <Modified>2019-08-09T20:07:43.366</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -90,19 +90,19 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\PomPomTimer.xr.xml">
       <PackagePath>PomPomTimer.xr.xml</PackagePath>
-      <Modified>2019-08-08T23:32:07.966</Modified>
+      <Modified>2019-08-09T21:36:48.822</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-08-08T23:32:07.985</Modified>
+      <Modified>2019-08-09T21:38:21.972</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-08-08T23:32:07.991</Modified>
+      <Modified>2019-08-09T21:38:21.969</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\PomTimeBlock.xbf">
       <PackagePath>PomTimeBlock.xbf</PackagePath>
-      <Modified>2019-08-08T23:32:07.992</Modified>
+      <Modified>2019-08-09T21:38:21.973</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -114,7 +114,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kisai\Documents\PomPomTimer\PomPomTimer\bin\x86\Debug\Core\PomPomTimer.exe">
       <PackagePath>PomPomTimer.exe</PackagePath>
-      <Modified>2019-08-08T23:32:08.971</Modified>
+      <Modified>2019-08-09T21:38:22.843</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

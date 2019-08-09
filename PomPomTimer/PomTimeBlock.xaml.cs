@@ -47,6 +47,7 @@ namespace PomPomTimer
 
         public bool wasRightTapped = false;
 
+        public bool canSendSystemNotifications = true;
         public object parentReference;
 
         public void SetTaskTime(int value)
@@ -199,7 +200,9 @@ namespace PomPomTimer
             if(TimerValueBar.Value >= TimerValueBar.Maximum && !shortBreak)
             {
                 shortBreak = true;
-                SendNotification();
+
+                if(canSendSystemNotifications)
+                    SendNotification();
             }
             else if(TimerValueBar.Value >= TimerValueBar.Maximum && shortBreak)
             {
@@ -208,7 +211,8 @@ namespace PomPomTimer
                 TimerValueBar.Value = 0;
                 dispatcherTimer.Stop();
 
-                SendBreakNotification();
+                if(canSendSystemNotifications)
+                    SendBreakNotification();
 
                 if (pomsDone >= 4)
                 {
@@ -340,11 +344,23 @@ namespace PomPomTimer
 
         private void MenuFlyoutItem_Click_3(object sender, RoutedEventArgs e)
         {
-            PlayPauseTimerSymbol.Glyph = playIcon;
-            PomButton.IsEnabled = true;
-            EnablePomodoroTask();
+            if (done)
+            {
+                PlayPauseTimerSymbol.Glyph = playIcon;
+                PomButton.IsEnabled = true;
+                EnablePomodoroTask();
 
-            MarkAsButton.Visibility = Visibility.Visible;
+                MarkAsButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                pomsDone = 0;
+                PlayPauseTimerSymbol.Glyph = playIcon;
+                PomOne.Glyph = pomodoroUnfilledDotIcon;
+                PomTwo.Glyph = pomodoroUnfilledDotIcon;
+                PomThree.Glyph = pomodoroUnfilledDotIcon;
+                PomFour.Glyph = pomodoroUnfilledDotIcon;
+            }
         }
 
         private void DiscriptionBlock_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -355,6 +371,35 @@ namespace PomPomTimer
         private void DiscriptionBlock_PointerExited(object sender, PointerRoutedEventArgs e)
         {
             Window.Current.CoreWindow.PointerCursor = new Windows.UI.Core.CoreCursor(Windows.UI.Core.CoreCursorType.Arrow, 0);
+        }
+
+        private void DiscriptionBlock_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            DiscriptionBlock.Visibility = Visibility.Collapsed;
+
+            DiscriptionField.Text = DiscriptionBlock.Text;
+            DiscriptionField.Visibility = Visibility.Visible;
+            DiscriptionField.Focus(FocusState.Keyboard);
+
+            DiscriptionField.SelectAll();
+        }
+
+        private void DisableDiscTextBox()
+        {
+            DiscriptionField.Visibility = Visibility.Collapsed;
+            DiscriptionBlock.Text = DiscriptionField.Text;
+
+            DiscriptionBlock.Visibility = Visibility.Visible;
+        }
+        private void DiscriptionField_LostFocus(object sender, RoutedEventArgs e)
+        {
+            DisableDiscTextBox();
+        }
+
+        private void DiscriptionField_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter && DiscriptionField.Visibility == Visibility.Visible)
+                DisableDiscTextBox();
         }
     }
 }
